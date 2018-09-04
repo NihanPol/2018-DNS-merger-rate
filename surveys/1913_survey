@@ -1,0 +1,23 @@
+################################################################################
+# model of the Arecibo survey which detected B1913+16
+################################################################################
+  1.1  ! survey degradation factor
+  10  ! antenna gain (K/Jy)
+  137 ! integration time (s)
+  17. ! sampling time (ms)
+  100.  ! system temperature (K)
+  430 ! centre frequency (MHz)
+  8  ! bandwidth (MHz)
+  0.250  ! channel bandwidth (MHz)
+  2    ! number of polarizations
+  10.  ! full-width half maximum (arcmin)
+  0.   ! minimum RA (deg)
+  360. ! maximum RA (deg)
+ -90.  ! minimum DEC (deg)
+  90.  ! maximum DEC (deg)
+ 35  ! minimum Galactic longitude (deg)
+ 75  ! maximum Galactic longitude (deg)
+  0.   ! minimum abs(Galactic latitude) (deg)
+  5.   ! maximum abs(Galactic latitude) (deg)
+  1.0  ! fractional survey coverage (0-1)
+  8.0  ! signal-to-noise ratio

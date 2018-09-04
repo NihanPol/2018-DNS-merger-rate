@@ -1,0 +1,23 @@
+################################################################################
+# model of Arecibo survey in which B1534+12 was detected
+################################################################################
+  1.1  ! survey degradation factor
+  10  ! antenna gain (K/Jy)
+  34 ! integration time (s)
+  .506625 ! sampling time (ms)
+  100.  ! system temperature (K)
+  430 ! centre frequency (MHz)
+  10  ! bandwidth (MHz)
+  0.078125  ! channel bandwidth (MHz)
+  2    ! number of polarizations
+  10.  ! full-width half maximum (arcmin)
+  0.   ! minimum RA (deg)
+  360. ! maximum RA (deg)
+ -1.  ! minimum DEC (deg)
+  38.  ! maximum DEC (deg)
+ 0  ! minimum Galactic longitude (deg)
+ 35  ! maximum Galactic longitude (deg)
+  30.   ! minimum abs(Galactic latitude) (deg)
+  90.   ! maximum abs(Galactic latitude) (deg)
+  1.0  ! fractional survey coverage (0-1)
+  8.0  ! signal-to-noise ratio
