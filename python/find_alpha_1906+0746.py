@@ -25,7 +25,7 @@ pops = np.arange(10, 6000, 100)
 runs_of_pop = 100
 runs_per_pop = 100
 
-lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
+#lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
 
 detections = np.full((runs_of_pop, runs_per_pop), 0)
 
