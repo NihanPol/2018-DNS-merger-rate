@@ -6,9 +6,9 @@ This GitHub repository is built to hold the code and data generated in the produ
 
 To perform a similar analysis from scratch:
 1. Download and install the latest version of [PsrPopPy](https://github.com/devanshkv/PsrPopPy2). This repository also has a tutorial and documentation describing how to use the software. 
-2. Replace the dosurvey.py file in PsrPopPy2/lib/python with the one provided in this repository.
+2. Replace the dosurvey.py file in PsrPopPy2/lib/python with the one provided in this repository. Also add the survey files given in this repo to PsrPopPy2/lib/surveys.
 3. If running the same analysis as the above paper, all degradation factors due to Doppler smearing of DNS orbits are already included in the dosurvey.py file.
-  - If performing a new analysis, add the new pulsars and their degradation factors as a dictionary as shown in the current dosurvey.py file. The scripts to calculate the degradation factors are given [here](https://github.com/NihanPol/SNR_degradation_factor_for_BNS_systems).
+  - If performing a new analysis, add the new pulsars and their degradation factors as a dictionary as shown in the dosurvey.py file provided in the repo. The scripts to calculate the degradation factors are given [here](https://github.com/NihanPol/SNR_degradation_factor_for_BNS_systems).
 4. Run the python script *find_alpha_xxxx.py* for the DNS system whose population you want to generate.
   - If performing a new analysis, generate a python script similar to that shown in *find_alpha_xxxx.py* for your pulsar.
   - **Preferably run these scripts on a node or cluster as they can take some time to execute**.
