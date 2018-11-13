@@ -3,7 +3,7 @@ import matplotlib.pyplot as pl
 from scipy.optimize import curve_fit
 from scipy.misc import factorial
 
-import dosurvey_1102 as dosurvey, populate
+import dosurvey_1534 as dosurvey, populate
 
 #Create a number of populations and see how many 1757-like binaries we would detect
 
@@ -23,13 +23,13 @@ pops = np.arange(10, 6000, 100)
 runs_of_pop = 100
 runs_per_pop = 100
 
-#lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
-lum_params = [-1.1, 0.9]       #Fiducial parameters
+lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
+#lum_params = [-1.1, 0.9]       #Fiducial parameters
 
 detections = np.full((runs_of_pop, runs_per_pop), 0)
 
-model_name = './1102_z330.model'
-#model_name = './1102_z330_varlum.model'
+#model_name = './1534_z330.model'
+model_name = './1534_z330_varlum.model'
 
 for xx, npop in enumerate(pops):
     
@@ -37,7 +37,7 @@ for xx, npop in enumerate(pops):
     
     for ii in range(runs_of_pop):
         
-        pop = populate.generate(npop, pDistPars = [log_p_1102, 0.0], duty_percent = 6., orbits = False, nostdout = True, zscale = 0.33, siDistPars=[-1.4, 1.0], lumDistPars = lum_params)
+        pop = populate.generate(npop, pDistPars = [log_p_1534, 0.0], duty_percent = 4., orbits = False, nostdout = True, zscale = 0.33, siDistPars=[-1.4, 1.0], lumDistPars = lum_params)
         pop.write(outf = model_name)
         
         for jj in range(runs_per_pop):
@@ -48,7 +48,7 @@ for xx, npop in enumerate(pops):
             
             detections[ii][jj] = output[0][2].ndet + output[1][2].ndet + output[2][2].ndet + output[3][2].ndet + output[4][2].ndet
             
-    filepath = "./pop_result_z330_1102/npop={:5d}.npy".format(npop)
+    filepath = "./pop_result_z330_1534_varlum/npop={:5d}.npy".format(npop)
     np.save(filepath, detections)
     
 print "All Done!"

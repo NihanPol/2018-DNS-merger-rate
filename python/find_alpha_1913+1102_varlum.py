@@ -23,13 +23,13 @@ pops = np.arange(10, 6000, 100)
 runs_of_pop = 100
 runs_per_pop = 100
 
-#lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
-lum_params = [-1.1, 0.9]       #Fiducial parameters
+lum_params = [-1.5, 0.94]     #From Bagchi, Lorimer, Jayanth, 2011
+#lum_params = [-1.1, 0.9]       #Fiducial parameters
 
 detections = np.full((runs_of_pop, runs_per_pop), 0)
 
-model_name = './1102_z330.model'
-#model_name = './1102_z330_varlum.model'
+#model_name = './1102_z330.model'
+model_name = './1102_z330_varlum.model'
 
 for xx, npop in enumerate(pops):
     
@@ -48,7 +48,7 @@ for xx, npop in enumerate(pops):
             
             detections[ii][jj] = output[0][2].ndet + output[1][2].ndet + output[2][2].ndet + output[3][2].ndet + output[4][2].ndet
             
-    filepath = "./pop_result_z330_1102/npop={:5d}.npy".format(npop)
+    filepath = "./pop_result_z330_1102_varlum/npop={:5d}.npy".format(npop)
     np.save(filepath, detections)
     
 print "All Done!"

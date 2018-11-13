@@ -135,7 +135,7 @@ def run(pop,
             deg_fac_1756 = {'PALFA_one_v_older': 0.9999, 'PHSURV': 0.9999, 'HTRU_low_1757': 0.9982, '1534_survey': 0.9999, 'PMSURV': 0.5598}
             deg_fac_1906 = {'PALFA_one_v_older': 0.9999, 'PHSURV': 0.9999, 'HTRU_low_1757': 0.9994, '1534_survey': 0.9999, 'PMSURV': 0.7337}
             
-            snr = snr * (deg_fac_1946[surv] ** 2)            #Please change this for each DNS
+            snr = snr * (deg_fac_1102[surv] ** 2)            #Please change this for each DNS
             ######################################################################################
             # add scintillation, if required
             # modifying S/N rather than flux is sensible because then
