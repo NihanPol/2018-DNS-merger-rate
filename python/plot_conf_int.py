@@ -13,7 +13,7 @@ def plot_area_under_curve(x, y, conf_int = 0.95, xlabel = r"$\cal{R}$$_{\rm tot}
     
     #5 percent of this area:
     percent_5 = (1 - conf_int) * total_area_under_post / 2
-    print percent_5
+    print(percent_5)
     #Integrate starting from R = 0 till we hit 5 percent area and find that value of R
     for ii in range(1, len(y_norm) + 1):
 

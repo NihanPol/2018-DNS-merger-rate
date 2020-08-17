@@ -1,0 +1,4 @@
+*.out
+*pyc
+*.model
+python/.ipynb_checkpoints
